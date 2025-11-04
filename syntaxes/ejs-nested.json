@@ -4,7 +4,7 @@
 	"injectionSelector": "L:text.html.ejs (* - meta.embedded.block.html) meta.block.js - (comment.block, text.html.ejs.override-js)",
 	"patterns": [
 		{
-			"begin": "[_-]?(%|\\?)(>)",
+			"begin": "[_-]?(%|\\?|\\u00E7)(>)",
 			"beginCaptures": {
 				"0": {
 					"name": "punctuation.definition.tag.end.ejs"
@@ -13,7 +13,7 @@
 					"name": "text.html.ejs.override-js"
 				}
 			},
-			"end": "(<)(%|\\?)(?![%#])[_=-]?",
+			"end": "(<)(%|\\?|\\u00E7)(?![%#])[_=-]?",
 			"endCaptures": {
 				"0": {
 					"name": "punctuation.definition.tag.begin.ejs"
