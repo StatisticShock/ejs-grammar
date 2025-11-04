@@ -21,13 +21,13 @@
 	],
 	"repository": {
 		"tag-block-comment": {
-			"begin": "<[%?\\u00E7]#",
+			"begin": "<[%?]#",
 			"beginCaptures": {
 				"0": {
 					"name": "punctuation.definition.comment.ejs"
 				}
 			},
-			"end": "[%?\\u00E7]>",
+			"end": "[%?]>",
 			"endCaptures": {
 				"0": {
 					"name": "punctuation.definition.comment.ejs"
@@ -36,7 +36,7 @@
 			"name": "comment.block.ejs"
 		},
 		"tag-single-line-section-comment": {
-			"begin": "(<[%?\\u00E7](?:(?!php))[%_=-]?)\\s*((\/\\*)(.*)(\\*\/))(?=(\\s*([%?\\u00E7]>)))",
+			"begin": "(<[%?](?:(?!php))[%_=-]?)\\s*((\/\\*)(.*)(\\*\/))(?=(\\s*([%?]>)))",
 			"captures": {
 				"1": {
 					"name": "keyword.operator.relational.js"
@@ -51,7 +51,7 @@
 					"name": "comment.block.ejs"
 				}
 			},
-			"end": "([%?\\u00E7]>)",
+			"end": "([%?]>)",
 			"endCaptures": {
 				"1": {
 					"name": "keyword.operator.relational.js"
@@ -62,13 +62,13 @@
 		},
 		"tag-section-comment": {
 			"name":"comment.block.ejs",
-			"begin":"(<[%?\\u00E7](?:(?!php)))\\s*((?=(\/\\*)))",
+			"begin":"(<[%?](?:(?!php)))\\s*((?=(\/\\*)))",
 			"beginCaptures": {
 				"1": {
 					"name": "keyword.operator.relational.js"
 				}
 			},
-			"end": "(\\*\/)\\s*([%?\\u00E7]>)",
+			"end": "(\\*\/)\\s*([%?]>)",
 			"endCaptures": {
 				"1": {
 					"name": "punctuation.definition.comment.ejs"
@@ -80,7 +80,7 @@
 			"patterns":[
 				{
 					"name":"ejs-end-tag",
-					"match":"([%?\\u00E7]>)",
+					"match":"([%?]>)",
 					"captures":{
 						"1":{
 							"name":"keyword.operator.relational.js"
@@ -89,7 +89,7 @@
 				},
 				{
 					"name":"ejs-begin-tag",
-					"match":"(<[%?\\u00E7](?:(?!php)))",
+					"match":"(<[%?](?:(?!php)))",
 					"captures":{
 						"1":{
 							"name":"keyword.operator.relational.js"
@@ -104,7 +104,7 @@
 		"tag-ejs-single-line": {
 			
 			"name": "meta.tag.metadata.script.ejs",
-			"begin":"(<[%?\\u00E7](?:(?!php))[%_=-]?)(?!(\\s*\\*\/))(((?!([_-]?[%?]>)).)+)(?=([_-]?[%?]>))",
+			"begin":"(<[%?](?:(?!php))[%_=-]?)(?!(\\s*\\*\/))(((?!([_-]?[%?]>)).)+)(?=([_-]?[%?]>))",
 			"beginCaptures": {
 				"0": {
 					"contentName":"source.js",
@@ -126,7 +126,7 @@
 					"name": "keyword.operator.relational.js"
 				}
 			},
-			"end": "(([_-]?[%?\\u00E7]>))",
+			"end": "(([_-]?[%?]>))",
 			"endCaptures": {
 				"1": {
 					"name": "keyword.operator.relational.js"
@@ -136,7 +136,7 @@
 		"tag-ejs-multi-line": {
 			"contentName":"source.js",
 			"name": "meta.block.ejs",
-			"begin":"(<[%?\\u00E7](?:(?!php))[%_=-]?)(?!(\\s*\\*\/))",
+			"begin":"(<[%?](?:(?!php))[%_=-]?)(?!(\\s*\\*\/))",
 			"beginCaptures": {
 				"1": {
 					"name": "keyword.operator.relational.js"
@@ -151,7 +151,7 @@
 					]
 				}
 			},
-			"end": "(([_-]?[%?\\u00E7]>))",
+			"end": "(([_-]?[%?]>))",
 			"endCaptures": {
 				"1": {
 					"name": "keyword.operator.relational.js"
