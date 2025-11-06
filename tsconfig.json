@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"noEmitOnError": true,
+		"target": "esnext",
+		"module": "commonjs",
+	},
+	"include": [
+		"./src/"
+	]
+}

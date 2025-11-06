@@ -1,7 +1,7 @@
 {
 	"name": "ejs-language-support-with-delimiters",
 	"displayName": "EJS language support with delimiters",
-	"description": "2019 - EJS language support for Visual Studio Code.",
+	"description": "EJS language support >>with delimiters<< for Visual Studio Code.",
 	"version": "1.3.2",
 	"license": "MIT",
 	"icon": "assets/icon.png",
@@ -9,8 +9,9 @@
 	"author": {
 		"name": "Derek Thomas"
 	},
+	"main": "./src/ejs.js",
 	"engines": {
-		"vscode": "^0.10.5"
+		"vscode": "^1.105.0"
 	},
 	"categories": [
 		"Programming Languages"
@@ -37,7 +38,7 @@
 		"grammars": [
 			{
 				"scopeName": "text.html.ejs",
-				"path": "./syntaxes/ejs.json",
+				"path": "./syntaxes/ejs.tmLanguage.json",
 				"injectTo": [
 					"text.html"
 				],
@@ -60,10 +61,27 @@
 			"emmet.includeLanguages": {
 				"ejs": "html"
 			}
-		}
+		},
+		"configuration": [
+			{
+				"title": "Delimiter",
+				"order": 0,
+				"properties": {
+					"ejs-language-support-with-delimiters.delimiter": {
+						"type": "string",
+						"default": "%",
+						"description": "The delimiter that will be used by the text highlighter."
+					}
+				}
+			}
+		]
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/StatisticShock/ejs-grammar.git"
+	},
+	"devDependencies": {
+		"@types/node": "^24.10.0",
+		"@types/vscode": "^1.105.0"
 	}
 }
