@@ -1,5 +1,9 @@
 # CHANGE LOG #
 
+## 1.3.2 ##
+
+- Add the possibility of changing delimiters
+
 ## 1.3.1 ##
 
 - Fix single lines with mutliple ejs tags. 
